@@ -1,0 +1,137 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+main{
+    /* display: flex; */
+    width: 100%;
+
+}
+.form-container {
+    width: 100%;
+    /* position: relative; */
+    height: 100vh; /* Full viewport height */
+    background-image: url('images/normal-university-820888_1920.jpg');
+}
+
+.form-container h1{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 80px;
+    margin: 0px 280px;
+    font-weight: 400;
+    color: white;
+}
+
+.form-container p{
+    text-align: center;
+    
+    padding-bottom: 20px;
+    font-size: 20px;
+    margin: 0px 280px;
+    font-weight: 400;
+    color: white;
+}
+
+.name-field{
+    margin-left: 550px;
+    display: block;
+    padding-top: 20px;
+}
+.name-field label{
+    font-size: 25px;
+    font-weight: 600;
+    padding-right: 14px;
+    color: white;
+}
+.name-field input{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.pass-label{
+    margin-right: 7px;
+}
+.login-btn{
+    margin-left: 700px;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+
+@media (max-width: 480px) {
+    main{
+        /* display: flex; */
+        width: 100%;
+        text-align: center;
+    
+    }
+    .form-container {
+        width: 100%;
+        /* position: relative; */
+        height: 100vh; /* Full viewport height */
+        background-image: url('images/normal-university-820888_1920.jpg');
+    }
+    
+    .form-container h1{
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-size: 20px;
+        margin: auto;
+        font-weight: 400;
+        color: white;
+    }
+    
+    .form-container p{
+        text-align: center;
+        
+        /* padding-bottom: 20px; */
+        font-size: 10px;
+        margin: auto;
+        /* margin: 0px 30px; */
+        font-weight: 400;
+        color: white;
+    }
+    
+    .name-field{
+        margin-left: 20px;
+        display: block;
+        padding-top: 10px;
+    }
+    .name-field label{
+        font-size: 10px;
+        font-weight: 600;
+        padding-right: 14px;
+        color: white;
+    }
+    .name-field input{
+        font-size: 10px;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 8px;
+    }
+    .pass-label{
+        margin-right: 2px;
+    }
+    .login-btn{
+        margin: auto;
+        font-size: 10px;
+        padding: 4px 8px;
+        border-radius: 8px;
+        margin-top: 5px;
+        font-weight: 700;
+    }
+}
