@@ -8,6 +8,7 @@
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
+    
 }
 main{
     /* display: flex; */
@@ -19,7 +20,11 @@ main{
     /* position: relative; */
     height: 100vh; /* Full viewport height */
     background-image: url('images/normal-university-820888_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
 
 .form-container h1{
     text-align: center;
@@ -27,36 +32,65 @@ main{
     padding-bottom: 20px;
     font-size: 80px;
     margin: 0px 280px;
-    font-weight: 400;
+    font-weight: 500;
     color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    
 }
 
 .form-container p{
     text-align: center;
     
     padding-bottom: 20px;
-    font-size: 20px;
+    font-size: 22px;
     margin: 0px 280px;
-    font-weight: 400;
-    color: white;
+    font-weight: 500;
+    color: whitesmoke;
+ /* Choose one of the above colors */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+
 
 .name-field{
     margin-left: 550px;
     display: block;
     padding-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .name-field label{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     padding-right: 14px;
-    color: white;
+    color: wheat;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.name-field input{
+.name-field input {
     font-size: 20px;
     font-weight: 600;
     padding: 8px 12px;
     border-radius: 8px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid lightgray; /* Default border for better structure */
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.name-field input:focus {
+    border: 2px solid wheat; 
+    box-shadow: 0 0 4px wheat, 0 0 20px wheat, 0 0 20px wheat; 
+    outline: none;
+}
+.name-field small{
+    color: wheat;  
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);  
+}
+.name-field a{
+    color: wheat;    
+    text-decoration: none;
+    padding-left: 4px;
+    color: greenyellow;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .pass-label{
     margin-right: 7px;
@@ -68,70 +102,19 @@ main{
     border-radius: 8px;
     margin-top: 20px;
     font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+/* register_as page */
 
-
-@media (max-width: 480px) {
-    main{
-        /* display: flex; */
-        width: 100%;
-        text-align: center;
-    
-    }
-    .form-container {
-        width: 100%;
-        /* position: relative; */
-        height: 100vh; /* Full viewport height */
-        background-image: url('images/normal-university-820888_1920.jpg');
-    }
-    
-    .form-container h1{
-        text-align: center;
-        padding-top: 40px;
-        padding-bottom: 20px;
-        font-size: 20px;
-        margin: auto;
-        font-weight: 400;
-        color: white;
-    }
-    
-    .form-container p{
-        text-align: center;
-        
-        /* padding-bottom: 20px; */
-        font-size: 10px;
-        margin: auto;
-        /* margin: 0px 30px; */
-        font-weight: 400;
-        color: white;
-    }
-    
-    .name-field{
-        margin-left: 20px;
-        display: block;
-        padding-top: 10px;
-    }
-    .name-field label{
-        font-size: 10px;
-        font-weight: 600;
-        padding-right: 14px;
-        color: white;
-    }
-    .name-field input{
-        font-size: 10px;
-        font-weight: 600;
-        padding: 8px 12px;
-        border-radius: 8px;
-    }
-    .pass-label{
-        margin-right: 2px;
-    }
-    .login-btn{
-        margin: auto;
-        font-size: 10px;
-        padding: 4px 8px;
-        border-radius: 8px;
-        margin-top: 5px;
-        font-weight: 700;
-    }
+.reg-as-main{
+    text-align: center;
+}
+.reg-as-main h1{
+    /* text-align: center; */
+    padding-top: 150px;
+}
+.chosing-part{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
 }
