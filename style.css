@@ -34,7 +34,7 @@ main{
     margin: 0px 280px;
     font-weight: 500;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     
 }
 
@@ -77,7 +77,7 @@ main{
 }
 
 .name-field input:focus {
-    border: 2px solid wheat; 
+    /* border: 2px solid wheat;  */
     box-shadow: 0 0 4px wheat, 0 0 20px wheat, 0 0 20px wheat; 
     outline: none;
 }
@@ -112,6 +112,7 @@ main{
 .reg-as-main h1{
     /* text-align: center; */
     padding-top: 150px;
+    font-size: 40px;
 }
 .chosing-part{
     display: flex;
