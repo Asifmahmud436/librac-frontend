@@ -246,9 +246,93 @@ span{
 .course-card h3{
     font-weight: 600;
 }
-
 .course-btn{
     margin-top: 10px;
     padding: 8px 12px;
     border-radius: 4px;
+}
+
+/*         dashboard page       */
+
+/* .dashboard-body{
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+.dashboard-nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    /* color: black; */
+}
+
+.dashboard-nav  .special-ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dashboard-nav li{
+    list-style: none;
+    /* padding: 20px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    color: orangered;
+    font-weight: 600;
+    font-size: 20px;
+}
+.dashboard-nav li small{
+    font-size: 13px;
+}
+.dashboard-nav  .name-ul{
+    font-size: 10px;
+}
+.dashboard-body h1{
+    padding: 13px;
+}
+.drop-btn{
+    color: #800020;
+    /* background-color: #333; */
+    font-weight: 700;
+    box-shadow: 2px 2px 8px #800020;
+    margin-bottom: 10px;
+}
+.course-title-owned{
+    color: rgb(88, 88, 222);
+}
+
+.dashboard-nav a{
+    text-decoration: none;
+    color: orangered;
+    font-weight: 600;
+}
+.dashboard-nav a:visited{
+    text-decoration: none;
+    color: orangered;
+    font-weight: 600;
+}
+
+/*          edit profile page       */
+.edit-form-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+    font-size: 20px;
+    color: lightseagreen;
+}
+.edit-form-container input{
+    padding: 10px 20px 10px 8px;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-right: 8px;
+    box-shadow: 2px 2px 8px lightcoral;
+}
+.edit-btn{
+    color: lightcoral;
+    /* padding: 15px; */
 }
