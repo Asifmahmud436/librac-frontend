@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Librac University</title>
+</head>
+<body>
+    <header>
+        <nav class="dashboard-nav">
+            <ul class="name-ul">
+                <li><a href="index.html">Librac University</a></li>
+                <!-- <li><small>Assalamu Alaikum, Asif Mahmud !</small></li> -->
+            </ul>
+            <ul class="special-ul">
+                <!-- <li><a href="login.html">Sign In</a></li> -->
+                <li><a href="register_as.html">Sign Up</a></li>
+                <!-- <li>Log Out</li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- <div class="image-container">
+            <img src="images/normal-university-820888_1920.jpg" alt="">
+        </div> -->
+        <div class="form-container">
+                <h1>Librac University</h1>
+                <p>LIBRAC University <span>(LIBRACU)</span> is a private university in Dhaka, Bangladesh, established in 2024. It is known for its commitment to quality education, innovation, and social impact. The university offers undergraduate, graduate, and postgraduate programs in various disciplines, including business, law, social sciences, computer science, engineering, and public health. It follows a liberal arts education model, encouraging students to engage in interdisciplinary studies and develop critical thinking skills.
+                </p>
+                <form action="/submit-form" method="POST">
+                    <div class="name-field">
+                        <label for="name">Username:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                    </div>
+                    <div class="name-field">
+                        <label for="password" class="pass-label">Password:</label>
+                        <input type="password" id="password" name="password" required><br><br>
+                        <small>Don't have an account?<a href="register_as.html">Sign up</a></small>
+                    </div>
+                    <input type="submit" value="Sign In" class="login-btn">
+                </form>
+        </div>
+    </main>
+</body>
+</html>

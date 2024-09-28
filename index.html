@@ -7,30 +7,115 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Librac University</title>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Home</title>
 </head>
 <body>
+    <header>
+        <nav class="dashboard-nav">
+            <ul class="name-ul">
+                <li>Librac University</li>
+                <!-- <li><small>Assalamu Alaikum, Asif Mahmud !</small></li> -->
+            </ul>
+            <ul class="special-ul">
+                <li><a href="login.html">Sign In</a></li>
+                <li><a href="register_as.html">Sign Up</a></li>
+                <!-- <li>Log Out</li> -->
+            </ul>
+        </nav>
+    </header>
     <main>
-        <!-- <div class="image-container">
-            <img src="images/normal-university-820888_1920.jpg" alt="">
-        </div> -->
-        <div class="form-container">
-                <h1>Librac University</h1>
-                <p>LIBRAC University <span>(LIBRACU)</span> is a private university in Dhaka, Bangladesh, established in 2024. It is known for its commitment to quality education, innovation, and social impact. The university offers undergraduate, graduate, and postgraduate programs in various disciplines, including business, law, social sciences, computer science, engineering, and public health. It follows a liberal arts education model, encouraging students to engage in interdisciplinary studies and develop critical thinking skills.
-                </p>
-                <form action="/submit-form" method="POST">
-                    <div class="name-field">
-                        <label for="name">Username:</label>
-                        <input type="text" id="name" name="name" required><br><br>
-                    </div>
-                    <div class="name-field">
-                        <label for="password" class="pass-label">Password:</label>
-                        <input type="password" id="password" name="password" required><br><br>
-                        <small>Don't have an account?<a href="register_as.html">Sign up</a></small>
-                    </div>
-                    <input type="submit" value="Sign In" class="login-btn">
-                </form>
+        <div class="form-container banner">
+            <h1>Librac University</h1>
+            <p>LIBRAC University <span>(LIBRACU)</span> is a private university in Dhaka, Bangladesh, established in 2024. It is known for its commitment to quality education, innovation, and social impact. The university offers undergraduate, graduate, and postgraduate programs in various disciplines, including business, law, social sciences, computer science, engineering, and public health. It follows a liberal arts education model, encouraging students to engage in interdisciplinary studies and develop critical thinking skills.
+            </p>
+        </div>
+        <div class="departments">
+            <h1>Our Departments</h1>
+            <div class="course-container">
+                <div class="course-card page-card">
+                    <h3 class="course-title course-title-owned page-title">CSE</h3>
+                    <p class="course-description">The CSE (Computer Science and Engineering) Department at LIBRAC University is one of the prominent departments, focusing on producing skilled graduates in areas such as software development, data science, AI, cybersecurity, and more. </p>
+                </div>
+                <div class="course-card page-card">
+                    <h3 class="course-title course-title-owned page-title">EEE</h3>
+                    <p class="course-description">The EEE (Electrical and Electronic Engineering) department at LIBRAC University is similarly regarded as a reputable and competitive program in Bangladesh.It emphasizes a balance of knowledge, preparing students for careers in both academia and the industry.
+
+                    </p>
+                </div>
+                <div class="course-card page-card">
+                    <h3 class="course-title course-title-owned page-title">BBA</h3>
+                    <p class="course-description">The BBA (Bachelor of Business Administration) program at LIBRAC University is widely considered one of the top business programs in Bangladesh, attracting students who are interested in both business theory and practical management skills.</p>
+                </div>
+                <div class="course-card page-card">
+                    <h3 class="course-title course-title-owned page-title">ECO</h3>
+                    <p class="course-description">The Economics (ECO) department at LIBRAC University is recognized for its strong academic foundation. It is a popular choice for students interested in policy-making, research, and understanding economic trends and challenges, both in Bangladesh and globally.</p>
+                </div>
+            </div>
+        </div>
+        <!-- carousel -->
+        <div class="carousel-container">
+            <h1>Scenic surroundings</h1>
+            <div class="swiffy-slider slider-item-reveal slider-nav-round slider-item-ratio slider-item-ratio-21x9" id="slider1">
+                <ul class="slider-container">
+                    <li><img src="images/throw-hat-657140_1280.jpg" loading="lazy" alt="..."></li>
+                    <li><img src="images/read-2007119_1920.jpg" loading="lazy" alt="..."></li>
+                    <li><img src="images/girl-6210483_1280.jpg" loading="lazy" alt="..."></li>
+                    <li><img src="images/internet-search-engine-1433323_1920.jpg" loading="lazy" alt="..."></li>
+                </ul>
+            
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            
+                <div class="slider-indicators slider-indicators-square d-none d-md-flex">
+                    <button class="active" aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                </div>
+            
+                <div class="slider-indicators slider-indicators-sm slider-indicators-dark slider-indicators-round d-md-none slider-indicators-highlight">
+                    <button class="active" aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                </div>
+            </div>
+        </div>
+        <div class="departments faculties">
+            <h1>Our Faculties</h1>
+            <div class="course-container">
+                <div class="course-card faculty-card">
+                    <h3 class="course-title course-title-owned faculty-title">Teacher Name</h3>
+                    <h4 class="course-title course-title-owned faculty-title">Teacher Designation</h4>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quas doloremque fugit quidem perferendis impedit sapiente ipsam doloribus inventore! Corrupti?</p>
+                </div>
+                <div class="course-card faculty-card">
+                    <h3 class="course-title course-title-owned faculty-title">Teacher Name</h3>
+                    <h4 class="course-title course-title-owned faculty-title">Teacher Designation</h4>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quas doloremque fugit quidem perferendis impedit sapiente ipsam doloribus inventore! Corrupti?</p>
+                </div>
+                <div class="course-card faculty-card">
+                    <h3 class="course-title course-title-owned faculty-title">Teacher Name</h3>
+                    <h4 class="course-title course-title-owned faculty-title">Teacher Designation</h4>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quas doloremque fugit quidem perferendis impedit sapiente ipsam doloribus inventore! Corrupti?</p>
+                </div>
+                <div class="course-card faculty-card">
+                    <h3 class="course-title course-title-owned faculty-title">Teacher Name</h3>
+                    <h4 class="course-title course-title-owned faculty-title">Teacher Designation</h4>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quas doloremque fugit quidem perferendis impedit sapiente ipsam doloribus inventore! Corrupti?</p>
+                </div>
+                
+            </div>
         </div>
     </main>
+
+    <!-- footer -->
+     <footer>
+        <small>Owned By Librac University | safaandsafa4@gmail.com</small>
+     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+
 </body>
 </html>

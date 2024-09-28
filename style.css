@@ -26,7 +26,7 @@ main{
 
 .form-container h1{
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 20px;
     font-size: 80px;
     margin: 0px 280px;
@@ -48,7 +48,7 @@ main{
 }
 
 .name-field{
-    margin-left: 550px;
+    margin-left: 570px;
     display: block;
     padding-top: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -57,7 +57,7 @@ main{
     font-size: 25px;
     font-weight: 700;
     padding-right: 14px;
-    color: black;
+    color: wheat;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .name-field input {
@@ -67,7 +67,7 @@ main{
     border-radius: 8px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border: 1px solid lightgray;
-    color: #333;
+    color: wheat;
     background-color: #f9f9f9;
 }
 
@@ -119,6 +119,7 @@ span{
 }
 .reg-as-main h1{
     padding-top: 100px;
+    color: bisque;
     font-size: 40px;
 }
 .chosing-part{
@@ -135,10 +136,14 @@ span{
     
 }
 .student-part img{
+    height: 300px;
+    width: 400px;
+    border-radius: 12px;
+}
+.student-part img:hover{
     height: 400px;
     width: 500px;
     border-radius: 12px;
-    
 }
 .student-part a,img{
     text-decoration: none;
@@ -152,6 +157,11 @@ span{
    
 }
 .teacher-part img{
+    height: 300px;
+    width: 400px;
+    border-radius: 12px;
+}
+.teacher-part img:hover{
     height: 400px;
     width: 500px;
     border-radius: 12px;
@@ -335,4 +345,64 @@ span{
 .edit-btn{
     color: lightcoral;
     /* padding: 15px; */
+}
+
+/* index page */
+.banner{
+    background-image: url(images/normal-university-820888_1920.jpg);
+}
+
+.departments {
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* border-bottom: 2px solid gainsboro; */
+}
+.departments h1{
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.page-card{
+    border-right:8px solid #800020;
+    border-left:0px;
+}
+
+.page-title{
+    color: #800020;
+}
+
+.departments h1{
+    color: #800020;
+    font-size: 40px;
+    font-weight: 600;
+}
+.carousel-container h1{
+    color: lightcoral;
+    padding: 40px 0px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+.faculties h1{
+    color: lightcoral;
+}
+.faculties h3{
+    color: lightcoral;
+    font-size: 25px;
+}
+.faculty-card{
+    /* border-right:8px solid #800020; */
+    border-left:8px solid lightcoral;
+    border-top:8px solid lightcoral;
+}
+.faculty-title{
+    color: lightcoral;
+}
+footer{
+    text-align: center;
+    height: 40px;
+    padding-top: 20px;
+    color: orangered;
+    background-color: black;
 }
