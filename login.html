@@ -31,19 +31,20 @@
                 <h1>Librac University</h1>
                 <p>LIBRAC University <span>(LIBRACU)</span> is a private university in Dhaka, Bangladesh, established in 2024. It is known for its commitment to quality education, innovation, and social impact. The university offers undergraduate, graduate, and postgraduate programs in various disciplines, including business, law, social sciences, computer science, engineering, and public health. It follows a liberal arts education model, encouraging students to engage in interdisciplinary studies and develop critical thinking skills.
                 </p>
-                <form action="/submit-form" method="POST">
+                <form action="" onsubmit="handleLogin(event)">
                     <div class="name-field">
-                        <label for="name">Username:</label>
-                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username"  required><br><br>
                     </div>
                     <div class="name-field">
                         <label for="password" class="pass-label">Password:</label>
-                        <input type="password" id="password" name="password" required><br><br>
+                        <input type="password" id="password" name="Password" required><br><br>
                         <small>Don't have an account?<a href="register_as.html">Sign up</a></small>
                     </div>
                     <input type="submit" value="Sign In" class="login-btn">
                 </form>
         </div>
     </main>
+    <script src="auth.js"></script>
 </body>
 </html>

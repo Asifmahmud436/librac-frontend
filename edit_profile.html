@@ -14,36 +14,49 @@
         <nav class="dashboard-nav">
             <ul class="name-ul">
                 <li><a href="index.html">Librac University</a></li>
-                <li><small>Assalamu Alaikum, Asif Mahmud !</small></li>
+                <!-- <li><small>Assalamu Alaikum, Asif Mahmud !</small></li> -->
             </ul>
             <ul class="special-ul">
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="add_assignment.html">Assignments</a></li>
-                <li>Log Out</li>
+                <li onclick="handleLogOut()">Log Out</li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="edit-form-container">
             <div class="img-container">
-                <img src="" alt="Profile Picture">
+                <img id="user-photo" src="" alt="User Photo">
+                <input type="file" id="user-image" name="image" placeholder="Change Photo" >
             </div>
-            <form action="/submit-form" method="POST">
-                <div class="">
-                    <label for="name">Username:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required><br><br>
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name" required>
-                    <label for="email" class="email-label">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+            
+                <div class="edit-form">
+                    <div>
+                        <label for="username">Username: <small>(email VC to edit)</small></label>
+                        <input type="text" id="username" name="username" readonly><br><br>
+                        <label for="first-name">First Name: <small>(email VC to edit)</small></label>
+                        <input type="text" id="first-name" name="first-name" readonly><br><br>
+                        <label for="last-name">Last Name: <small>(email VC to edit)</small></label>
+                        <input type="text" id="last-name" name="last-name" readonly><br><br>
+                    </div>
+                    <div>
+                        <label for="phone-no" class="email-label">Cell no:</label>
+                        <input type="tel" id="phone-no" name="phone-no" required><br><br>
+                        <!-- "address": null,-->
+                        <label for="librac-id" class="librac-label">Librac ID:</label>
+                        <input type="number" id="librac-id" name="librac-id" required><br><br>
+                        <label for="address" class="librac-label">Address:</label>
+                        <input type="text" id="address" name="address" required><br><br>
+                    </div>
+                
+                    <input type="submit" value="Save Changes" class="reg-btn edit-btn" id="save-button">
                 </div>
-                <div class="">
-                    <input type="submit" value="Save Changes" class="reg-btn edit-btn">
-                </div>
-            </form>
+            
         </div>
     </main>
+    <script src="auth.js"></script>
+    <script src="edit_profile.js"></script>
+    <script src="add_assignment.js"></script>
+    <!-- <script src="ed.js"></script> -->
 </body>
 </html>

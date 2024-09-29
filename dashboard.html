@@ -14,39 +14,25 @@
         <nav class="dashboard-nav">
             <ul class="name-ul">
                 <li><a href="index.html">Librac University</a></li>
-                <li><small>Assalamu Alaikum, Asif Mahmud !</small></li>
+                <!-- <li><small>Assalamu Alaikum, Asif Mahmud !</small></li> -->
             </ul>
             <ul class="special-ul">
                 <li><a href="edit_profile.html">Edit Profile</a></li>
                 <li><a href="add_assignment.html">Assignments</a></li>
-                <li>Log Out</li>
+                <li onclick="handleLogOut()">Log Out</li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Your Courses:</h1>
-        <div class="course-container">
-            <div class="course-card">
-                <h3 class="course-title course-title-owned">CSE 110</h3>
-                <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat esse reprehenderit minima, quasi vero fuga rem rerum quo nobis? Eum neque est tenetur unde aspernatur sequi ex, magni ratione quos!</p>
-                <button class="course-btn drop-btn" type="submit">Drop Course</button>
-            </div>
-            <div class="course-card">
-                <h3 class="course-title course-title-owned">CSE 110</h3>
-                <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat esse reprehenderit minima, quasi vero fuga rem rerum quo nobis? Eum neque est tenetur unde aspernatur sequi ex, magni ratione quos!</p>
-                <button class="course-btn drop-btn" type="submit">Drop Course</button>
-            </div>
-            <div class="course-card">
-                <h3 class="course-title course-title-owned">CSE 110</h3>
-                <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat esse reprehenderit minima, quasi vero fuga rem rerum quo nobis? Eum neque est tenetur unde aspernatur sequi ex, magni ratione quos!</p>
-                <button class="course-btn drop-btn" type="submit">Drop Course</button>
-            </div>
-            <div class="course-card">
-                <h3 class="course-title course-title-owned">CSE 110</h3>
-                <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat esse reprehenderit minima, quasi vero fuga rem rerum quo nobis? Eum neque est tenetur unde aspernatur sequi ex, magni ratione quos!</p>
-                <button class="course-btn drop-btn" type="submit">Drop Course</button>
-            </div>
+        <div class="course-container student-course-container">
+            
+        </div>
+        <div class="course-container teacher-course-container">
+            
         </div>
     </main>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>

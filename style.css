@@ -217,6 +217,17 @@ span{
     font-size: 20px;
     font-weight: 500;
 }
+.teacher-form-container select{
+    /* border: 1px solid gray; */
+    /* border-radius: 4px; */
+    /* pad: 8px 12px; */
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+    padding-right: 20px ;
+    padding-left: 20px ;
+}
 .email-label{
     margin-right: 40px;
 }
@@ -239,7 +250,7 @@ span{
 }
 .course-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     /* flex-direction: column; */
     /* text-align: center; */
@@ -247,9 +258,18 @@ span{
 
 .course-card{
     width: 300px;
-    padding: 10px;
+    padding: 18px;
     margin: 10px;
-    height: 180px;
+    height: 80px;
+    border-left: 8px solid slateblue;
+    box-shadow: 2px 2px 8px gray;
+}
+.teacher-course-card{
+    width: 300px;
+    padding: 18px;
+    margin: 10px;
+    height: 230px;
+    /* border-radius: 8px; */
     border-left: 8px solid slateblue;
     box-shadow: 2px 2px 8px gray;
 }
@@ -303,7 +323,8 @@ span{
     font-size: 10px;
 }
 .dashboard-body h1{
-    padding: 13px;
+    padding-left: 90px;
+    padding-bottom: 90px;
 }
 .drop-btn{
     color: #800020;
@@ -335,12 +356,24 @@ span{
     font-size: 20px;
     color: lightseagreen;
 }
+.edit-form-container .img-container{
+    width: 40%;
+}
 .edit-form-container input{
     padding: 10px 20px 10px 8px;
     font-size: 20px;
     border-radius: 8px;
     margin-right: 8px;
     box-shadow: 2px 2px 8px lightcoral;
+}
+.edit-form label small{
+    font-size: 10px;
+    color: #800020;
+}
+.edit-form-container img{
+    height: 200px;
+    border-radius: 4px;
+    width:428px;
 }
 .edit-btn{
     color: lightcoral;
@@ -405,4 +438,32 @@ footer{
     padding-top: 20px;
     color: orangered;
     background-color: black;
+}
+.librac-label{
+    padding-right: 20px;
+}
+.edit-form{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* select */
+#course {
+    width: 300px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    font-size: 16px;
+    color: #333;
+    cursor: pointer; 
+    padding-right: 40px;
+}
+#course:hover {
+    border-color: #007bff; 
+}
+
+#course:focus {
+    outline: none; 
+    border-color: #0056b3; 
 }

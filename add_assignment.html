@@ -14,29 +14,31 @@
         <nav class="dashboard-nav">
             <ul class="name-ul">
                 <li><a href="index.html">Librac University</a></li>
-                <li><small>Assalamu Alaikum, Asif Mahmud !</small></li>
+                
             </ul>
             <ul class="special-ul">
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="edit_profile.html">Edit Profile</a></li>
-                <li>Log Out</li>
+                <li onclick="handleLogOut()">Log Out</li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="edit-form-container">
-            <form action="/submit-form" method="POST">
-                <div class="">
+        <div class="edit-form-container assignment-container">
+            <form action="" onsubmit="handleAssignment(event)">
+                <div class="" id="assignment-form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
-                    <label for="topic">Topic:</label>
-                    <input type="text" id="topic" name="topic" required><br><br>
+                    <label for="course" class="email-label">Course:</label>
+                    <select id="course" name="course" required>
+                        <!-- teachers specific courses to set assignment -->
+                    </select><br><br>
                     <label for="marks">Marks:</label>
                     <input type="number" id="marks" name="marks" required>
                     <br><br>
                 </div>
                 <div class="">
-                    <input type="submit" value="Make the Exam" class="reg-btn assign-btn">
+                    <input type="submit" value="Take Exam" class="reg-btn assign-btn">
                 </div>
             </form>
         </div>
@@ -59,5 +61,7 @@
             
         </div>
     </main>
+    <script src="auth.js"></script>
+    <script src="add_assignment.js"></script>
 </body>
 </html>
