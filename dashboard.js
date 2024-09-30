@@ -37,7 +37,7 @@ const loadStudentCourses = (data) =>{
     data.forEach(course => {
         const container = document.querySelector('.student-course-container');
         container.innerHTML +=`
-            <div class="course-card">
+            <div class="course-card student-course-card">
                 <h3 class="course-title course-title-owned">${course.course_name}</h3>
                 <button class="course-btn drop-btn" type="submit">Drop Course</button>
             </div>

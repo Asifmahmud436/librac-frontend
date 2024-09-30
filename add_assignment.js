@@ -11,6 +11,11 @@ const getInfo = () =>{
         .then((res) => res.json())
         .then((data) => loadName(data));
 
+    // fetch to load the type of user for assignment
+    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+        .then((res) => res.json())
+        .then((data) => getUserID(data));
+
     // fetch to see if the user is student or teacher
     fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
@@ -75,8 +80,8 @@ function handleAssignment(event) {
         })
         .then(data => {
             console.log('Assignment submitted:', data);
-            alert('Assignment submitted successfully!');
-            // window.location.href = 'dashboard.html'; 
+            // alert('Assignment submitted successfully!');
+            window.location.href = 'add_assignment.html'; 
         })
         .catch(error => {
             console.error('Error:', error);
@@ -85,6 +90,47 @@ function handleAssignment(event) {
     } else {
         alert('You must be logged in to submit an assignment.');
     }
+}
+const getUserID = (userInfo) =>{
+    if(userInfo.user_type === "Student"){
+        fetch(`http://127.0.0.1:8000/assignments/list/?student_username=${userInfo.username}`)
+        .then((res) => res.json())
+        .then((data) => {
+            displayStudentAssignments(data);
+        });
+    } else{
+        fetch(`http://127.0.0.1:8000/assignments/list/?teacher_username=${userInfo.username}`)
+        .then((res) => res.json())
+        .then((data) => {
+            displayTeacherAssignments(data);
+        });
+    }
+};
+
+const displayTeacherAssignments = (courses)=>{
+    courses.forEach(course => {
+        const container = document.querySelector("#teacher-assignment");
+        container.innerHTML +=`
+            <div class="course-card teacher-assignment-card">
+                <h2 class="course-title">${course.name}</h2>
+                <h3 class="course-title">Course: ${course.name_of_course}</h3>
+                <h3 class="course-title">Marks: ${course.marks}</h3>
+            </div>
+        `;
+    });
+}
+
+const displayStudentAssignments = (courses)=>{
+    courses.forEach(course => {
+        const container = document.querySelector("#student-assignment");
+        container.innerHTML +=`
+            <div class="course-card teacher-assignment-card">
+                <h2 class="course-title">${course.name}</h2>
+                <h3 class="course-title">Course: ${course.name_of_course}</h3>
+                <h3 class="course-title">Marks: ${course.marks}</h3>
+            </div>
+        `;
+    });
 }
 
 getInfo();

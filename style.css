@@ -70,6 +70,13 @@ main{
     color: wheat;
     background-color: #f9f9f9;
 }
+#teacher-container h3{
+    padding-bottom: 70px;
+    padding-top: 15px;
+}
+.faculty-card img{
+    width: 300px;
+}
 
 .name-field input:focus {
     box-shadow: 0 0 4px whitesmoke, 0 0 4px whitesmoke, 0 0 20px whitesmoke; 
@@ -260,6 +267,14 @@ span{
     width: 300px;
     padding: 18px;
     margin: 10px;
+    height: 180px;
+    border-left: 8px solid slateblue;
+    box-shadow: 2px 2px 8px gray;
+}
+.student-course-card{
+    width: 300px;
+    padding: 18px;
+    margin: 10px;
     height: 80px;
     border-left: 8px solid slateblue;
     box-shadow: 2px 2px 8px gray;
@@ -282,16 +297,7 @@ span{
     border-radius: 4px;
 }
 
-/*         dashboard page       */
-
-/* .dashboard-body{
-    font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-} */
+/*                  dashboard page             */
 
 .dashboard-nav{
     background-color: black;
@@ -428,6 +434,7 @@ span{
     /* border-right:8px solid #800020; */
     border-left:8px solid lightcoral;
     border-top:8px solid lightcoral;
+    height: 400px;
 }
 .faculty-title{
     color: lightcoral;
@@ -466,4 +473,12 @@ footer{
 #course:focus {
     outline: none; 
     border-color: #0056b3; 
+}
+
+.teacher-assignment-card{
+    height: 120px;
+}
+.teacher-assignment-card h2{
+    color: #007bff;
+    padding-bottom: 20px;
 }
