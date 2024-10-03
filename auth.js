@@ -94,6 +94,7 @@ const handleLogin = (event) => {
                 if(data.token && data.user_id){
                     localStorage.setItem('token',data.token);
                     localStorage.setItem('user_id',data.user_id);
+                    localStorage.setItem('username', username);
                     window.location.href = 'dashboard.html';
                 }
             });    

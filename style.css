@@ -482,3 +482,22 @@ footer{
     color: #007bff;
     padding-bottom: 20px;
 }
+.advising-card{
+    height: 270px;
+}
+.course-code{
+    color: #007bff;
+}
+.course-name{
+    color: #800020;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.course-teacher_name{
+    /* color: bisque; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.log-out-btn{
+    cursor: pointer;
+}

@@ -34,22 +34,30 @@ const loadCourse = (data) =>{
 }
 
 const loadStudentCourses = (data) =>{
-    data.forEach(course => {
-        if(!course.drop_course){
-            const container = document.querySelector('.student-course-container');
-            const courseCard = document.createElement('div');
-            courseCard.classList.add('course-card','student-course-card');
-            courseCard.innerHTML +=
-            `
-                <h3 class="course-title course-title-owned">${course.course_name}</h3>
-                <button class="course-btn drop-btn" type="button" data-course-id='${course.id}'>Drop Course</button>
-            `;
-            container.appendChild(courseCard);
-            courseCard.querySelector('.drop-btn').addEventListener('click',()=>{
-                dropCourse(course.id);
-            })
-        }
-    });
+    if(data.length>0){
+        data.forEach(course => {
+            if(!course.drop_course){
+                const container = document.querySelector('.student-course-container');
+                const courseCard = document.createElement('div');
+                courseCard.classList.add('course-card','student-course-card');
+                courseCard.innerHTML +=
+                `
+                    <h3 class="course-title course-title-owned">${course.course_name}</h3>
+                    <button class="course-btn drop-btn" type="button" data-course-id='${course.id}'>Drop Course</button>
+                `;
+                container.appendChild(courseCard);
+                courseCard.querySelector('.drop-btn').addEventListener('click',()=>{
+                    dropCourse(course.id);
+                })
+            }
+        });
+    }
+    else{
+        const container = document.querySelector('.student-course-container');
+        container.innerHTML =`
+            <h1>Go to the <a href="course_page.html">Advising Page</a> to Add Courses for this Semester</h1>
+        `;
+    }
 }
 
 const dropCourse = (courseId) => {
