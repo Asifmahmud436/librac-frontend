@@ -13,7 +13,7 @@ const loadAllTeachers = (teachers) => {
         container.innerHTML +=
         `
             <div class="course-card faculty-card">
-                <img src="images/girl-6210483_1280.jpg" alt="">
+                <img src="${teacher.image}" alt="">
                 <h3 class="course-title course-title-owned faculty-title">${teacher.user.username} ${teacher.user.last_name}</h3>
                 <h4 class="course-title course-title-owned faculty-title">Designaion: ${teacher.designation}</h4>
                 <h4 class="course-title course-title-owned faculty-title">Email: ${teacher.user.email}</h4>
