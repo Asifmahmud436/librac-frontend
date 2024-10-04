@@ -82,25 +82,46 @@ const handleLogin = (event) => {
         username,
         password,
     }
+    const errorMessageDiv = document.getElementById('error-message');
+    if (errorMessageDiv) {
+        errorMessageDiv.textContent = '';
+    }
     if(username && password){
         fetch(`http://127.0.0.1:8000/accounts/login/`,{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(info),
         })
-            .then((res)=>(res.json()))
-            .then((data)=>{
-                console.log(data);
-                if(data.token && data.user_id){
-                    localStorage.setItem('token',data.token);
-                    localStorage.setItem('user_id',data.user_id);
-                    localStorage.setItem('username', username);
-                    window.location.href = 'dashboard.html';
-                }
-            });    
-    
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then((data) => {
+            if (data.token && data.user_id) {
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('user_id', data.user_id);
+                localStorage.setItem('username', username);
+                window.location.href = 'dashboard.html';
+            } else if (data.error) {
+                showErrorMessage(data.error);
+            }
+        }) 
+        .catch((error) => {
+            console.error("Fetch error: ", error);
+            showErrorMessage('Login failed. Please try again.');
+        });
     }
 }
+
+const showErrorMessage =(message)=>{
+    const errorMessageDiv = document.getElementById('error-message');
+    if(errorMessageDiv){
+        errorMessageDiv.textContent = message;
+        errorMessageDiv.style.color = 'red';
+    }
+};
 
 const handleLogOut =()=>{
     const user_id = localStorage.getItem('user_id');
@@ -120,3 +141,5 @@ const handleLogOut =()=>{
         window.location.href = 'login.html';
     }
 )};
+
+
