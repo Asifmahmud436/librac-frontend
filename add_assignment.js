@@ -57,7 +57,7 @@ function handleAssignment(event) {
     if (token) {
         const assignmentData = {
             name: name,
-            course: course,  // Ensure this is the course ID
+            course: course,  
             marks: marks,
         };
 
