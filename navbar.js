@@ -40,7 +40,7 @@ const showNavItems = (is_staff) => {
                 </ul>
                 <ul class="special-ul">
                     <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="edit_profile.html">Edit Profile</a></li>
+                    <li><a href="edit_profile.html">Profile</a></li>
                     <li><a href="add_assignment.html">Assignments</a></li>
                     <li class='log-out-btn' onclick="handleLogOut()">Log Out</li>
                 </ul>
@@ -59,5 +59,6 @@ const showNavItems = (is_staff) => {
         `;
     }
 };
+
 
 seeInfo();

@@ -44,7 +44,7 @@ const loadStudent = (id) => {
     })
     .then((res) => res.json())
     .then(data => {
-        document.getElementById('user-photo').src = data.image || '';
+        document.getElementById('user-photo').src = data.image || 'images/default.png' ;
         document.getElementById('username').value = data.user.username || 'Add Something!';
         document.getElementById('first-name').value = data.user.first_name || 'Add Something!';
         document.getElementById('last-name').value = data.user.last_name || 'Add Something!';
@@ -66,7 +66,7 @@ const loadTeacher = (id) => {
     })
     .then((res) => res.json())
     .then(data => {
-        document.getElementById('user-photo').src = data.image || '';
+        document.getElementById('user-photo').src = data.image || 'images/default.png';
         document.getElementById('username').value = data.user.username || 'Add Something!';
         document.getElementById('first-name').value = data.user.first_name || 'Add Something!';
         document.getElementById('last-name').value = data.user.last_name || 'Add Something!';

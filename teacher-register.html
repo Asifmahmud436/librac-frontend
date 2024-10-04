@@ -20,16 +20,19 @@
             <img src="images/teacher-99741_1920.jpg" alt="">
         </div>
         <div class="teacher-form-container">
-            <form action="" onsubmit="handleReg(event)">
+            <form action="" class="teacher-form" onsubmit="handleReg(event)">
                 <div>
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
                     <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required><br><br>
+                    <input type="text" id="first-name" name="first-name" required>
                     <label for="last-name">Last Name:</label>
                     <input type="text" id="last-name" name="last-name" required>
                     <label for="email" class="email-label">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <input type="email" id="email" name="email" required>
+                    <input type="submit" value="Sign Up" class="reg-btn">
+                </div>
+                <div>
                     <label for="librac-id">Librac ID:</label>
                     <input type="number" id="librac-id" name="librac-id" required>
                     <label for="designation" class="email-label">Designation:</label>
@@ -37,18 +40,18 @@
                         <option value="Lecturer">Lecturer</option>
                         <option value="Assistant Professor">Assistant Professor</option>
                         <option value="Researcher Professor">Researcher Professor</option>
-                    </select><br><br>
-                </div>
-                <div>
+                    </select>
                     <label for="password" class="pass-label">Password:</label>
                     <input type="password" id="password" name="password" required>
                     <label for="confirm-password" class="pass-label">Confirm Password:</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required><br><br>
-                    <input type="submit" value="Sign Up" class="reg-btn">
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    
+                    
                 </div>
-                <small>Already have an account?<a href="login.html">Log In</a></small>
+                
                 
             </form>
+            <small class="small-reg">Already have an account? <a href="login.html">Log In</a></small>
         </div>
     </main>
     <script src="auth.js"></script>

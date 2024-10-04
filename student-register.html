@@ -16,31 +16,34 @@
         </nav>
     </header>
     <main class="teacher-reg-main student-reg">
-        <div class="student-image-part"></div>
+        <div class="image-part">
             <img src="images/read-584149_1920.jpg" alt="">
         </div>
         <div class="teacher-form-container student-form">
-            <form action="" onsubmit="handleRegStudent(event)">
+            <form action=""  class="teacher-form" onsubmit="handleRegStudent(event)">
                 <div class="">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
                     <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required><br><br>
+                    <input type="text" id="first-name" name="first-name" required>
                     <label for="last-name">Last Name:</label>
                     <input type="text" id="last-name" name="last-name" required>
-                    <label for="email" class="email-label">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="librac-id">Librac ID:</label>
-                    <input type="number" id="librac-id" name="librac-id" required>
-                
-                    <label for="password" class="pass-label">Password:</label>
-                    <input type="password" id="password" name="password" required><br><br>
                     <label for="confirm-password" class="pass-label">Confirm Password:</label>
                     <input type="password" id="confirm-password" name="confirm-password" required><br><br>
-                    <input type="submit" value="Sign Up" class="reg-btn">
                 </div>
-                <small>Already have an account?<a href="login.html">Log In</a></small>
+                <div>
+                    <label for="email" class="email-label">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="librac-id">Librac ID:</label>
+                    <input type="number" id="librac-id" name="librac-id" required>
+                    <label for="password" class="pass-label">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    
+                    <input type="submit" value="Sign Up" class="reg-btn reg-std">
+                </div>
+                
             </form>
+            <small class="small-reg">Already have an account? <a href="login.html">Log In</a></small>
         </div>
     </main>
     <script src="auth.js"></script>
