@@ -1,13 +1,13 @@
 const getInfo = () =>{
     const user_id = localStorage.getItem('user_id');
-
+    
     // fetch to load the name of the user
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => loadName(data));
 
     // fetch to see if the user is student or teacher
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => loadCourse(data));
 };
@@ -21,13 +21,13 @@ const loadCourse = (data) =>{
     // load all the courses of a student
     if(data.user_type == "Student"){
 
-        fetch(`http://127.0.0.1:8000/dashboards/list/?student_name=${data.username}`)
+        fetch(`https://librac-backend.vercel.app/dashboards/list/?student_name=${data.username}`)
         .then((res) => res.json())
         .then((data) => loadStudentCourses(data));
     }
     else{
         document.querySelector('.student-course-container').style.display = 'none';
-        fetch(`http://127.0.0.1:8000/courses/list/?teacher_name=${data.username}`)
+        fetch(`https://librac-backend.vercel.app/courses/list/?teacher_name=${data.username}`)
         .then((res) => res.json())
         .then((data) => loadTeacherCourses(data));
     }
@@ -62,7 +62,7 @@ const loadStudentCourses = (data) =>{
 
 const dropCourse = (courseId) => {
     const token = localStorage.getItem('token');
-    fetch(`http://127.0.0.1:8000/dashboards/list/${courseId}/drop/`, {
+    fetch(`https://librac-backend.vercel.app/dashboards/list/${courseId}/drop/`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',

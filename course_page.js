@@ -1,11 +1,11 @@
 const getAllCourses = () => {
-    fetch(`http://127.0.0.1:8000/courses/list/`)
+    fetch(`https://librac-backend.vercel.app/courses/list/`)
         .then((res) => res.json())
         .then((data) => loadCoureForReg(data));
 }
 const getStudentId = () => {
     const user_id = localStorage.getItem('user_id');
-    fetch(`http://127.0.0.1:8000/students/by_user_id/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/students/by_user_id/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => localStorage.setItem('special_id',data.id));
 }
@@ -45,7 +45,7 @@ const appendCourse = (courseId) => {
             drop_course: false,
         };
 
-        fetch('http://127.0.0.1:8000/dashboards/list/', { // Use the correct URL for creating a new dashboard entry
+        fetch('https://librac-backend.vercel.app/dashboards/list/', { // Use the correct URL for creating a new dashboard entry
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

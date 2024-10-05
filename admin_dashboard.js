@@ -1,7 +1,7 @@
 const isAdmin = () => {
     const user_id = localStorage.getItem('user_id');
     
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => {
             if (data.is_staff === true) { 
@@ -18,7 +18,7 @@ const isAdmin = () => {
 };
 
 const getTeachers = () =>{
-    fetch('http://127.0.0.1:8000/teachers/list/')
+    fetch('https://librac-backend.vercel.app/teachers/list/')
         .then((res) => res.json())
         .then((data) => loadTeachers(data));
 }
@@ -46,7 +46,7 @@ function handleCourse(event){
             description : description,
             teacher : teacher,
         }
-        fetch('http://127.0.0.1:8000/courses/list/', {
+        fetch('https://librac-backend.vercel.app/courses/list/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

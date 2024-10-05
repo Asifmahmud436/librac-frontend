@@ -4,7 +4,7 @@ const seeInfo = () => {
     if (token) {
         const user_id = localStorage.getItem('user_id');
         
-        fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+        fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
             .then((res) => res.json())
             .then((data) => {
                 showNavItems(data.is_staff);

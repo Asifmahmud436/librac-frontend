@@ -2,22 +2,22 @@ const getInfo = () =>{
     const user_id = localStorage.getItem('user_id');
 
     // fetch to load the course of the teachers to set assignment
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => loadCourse(data.username));
 
     // fetch to load the name of the user
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => loadName(data));
 
     // fetch to load the type of user for assignment
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => getUserID(data));
 
     // fetch to see if the user is student or teacher
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => {
             if(data.user_type=='Student'){
@@ -32,7 +32,7 @@ const loadName = (data) =>{
 }
 
 const loadCourse = (name) =>{
-    fetch(`http://127.0.0.1:8000/courses/list/?teacher_name=${name}`)
+    fetch(`https://librac-backend.vercel.app/courses/list/?teacher_name=${name}`)
     .then((res) => res.json())
     .then((data) => displayCourse(data));
 }
@@ -61,7 +61,7 @@ function handleAssignment(event) {
             marks: marks,
         };
 
-        fetch('http://127.0.0.1:8000/assignments/list/', {
+        fetch('https://librac-backend.vercel.app/assignments/list/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -93,13 +93,13 @@ function handleAssignment(event) {
 }
 const getUserID = (userInfo) =>{
     if(userInfo.user_type === "Student"){
-        fetch(`http://127.0.0.1:8000/assignments/list/?student_username=${userInfo.username}`)
+        fetch(`https://librac-backend.vercel.app/assignments/list/?student_username=${userInfo.username}`)
         .then((res) => res.json())
         .then((data) => {
             displayStudentAssignments(data);
         });
     } else{
-        fetch(`http://127.0.0.1:8000/assignments/list/?teacher_username=${userInfo.username}`)
+        fetch(`https://librac-backend.vercel.app/assignments/list/?teacher_username=${userInfo.username}`)
         .then((res) => res.json())
         .then((data) => {
             displayTeacherAssignments(data);

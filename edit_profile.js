@@ -1,13 +1,13 @@
 const getName = () =>{
     const user_id = localStorage.getItem('user_id');
-    fetch(`http://127.0.0.1:8000/accounts/user/?user_id=${user_id}`)
+    fetch(`https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}`)
         .then((res) => res.json())
         .then((data) => getID(data));
 };
 
 const getID = (userInfo) =>{
     if(userInfo.user_type === "Student"){
-        fetch(`http://127.0.0.1:8000/students/list/?student_name=${userInfo.username}`)
+        fetch(`https://librac-backend.vercel.app/students/list/?student_name=${userInfo.username}`)
         .then((res) => res.json())
         .then((data) => {
             const studentId = data[0].id;
@@ -19,7 +19,7 @@ const getID = (userInfo) =>{
             });
         });
     } else if (userInfo.user_type === "Teacher") {
-        fetch(`http://127.0.0.1:8000/teachers/list/?teacher_name=${userInfo.username}`)
+        fetch(`https://librac-backend.vercel.app/teachers/list/?teacher_name=${userInfo.username}`)
         .then((res) => res.json())
         .then((data) => {
             const teacherId = data[0].id;
@@ -35,7 +35,7 @@ const getID = (userInfo) =>{
 
 const loadStudent = (id) => {
     const token = localStorage.getItem('token');
-    fetch(`http://127.0.0.1:8000/students/list/${id}`, {
+    fetch(`https://librac-backend.vercel.app/students/list/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': `Token ${token}`,
@@ -57,7 +57,7 @@ const loadStudent = (id) => {
 
 const loadTeacher = (id) => {
     const token = localStorage.getItem('token');
-    fetch(`http://127.0.0.1:8000/teachers/list/${id}`, {
+    fetch(`https://librac-backend.vercel.app/teachers/list/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': `Token ${token}`,
@@ -93,7 +93,7 @@ const editTeacher = (id) =>{
         formData.append('image', imageFile);
     }
 
-    fetch(`http://127.0.0.1:8000/teachers/list/${id}/`, {
+    fetch(`https://librac-backend.vercel.app/teachers/list/${id}/`, {
         method: 'PATCH',
         headers: {
             'Authorization': `Token ${token}`,
@@ -123,7 +123,7 @@ const editStudent = (id) =>{
         formData.append('image', imageFile);
     }
 
-    fetch(`http://127.0.0.1:8000/students/list/${id}/`, {
+    fetch(`https://librac-backend.vercel.app/students/list/${id}/`, {
         method: 'PATCH',
         headers: {
             'Authorization': `Token ${token}`,

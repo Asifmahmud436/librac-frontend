@@ -1,5 +1,5 @@
 const getAllTeachers = () => {
-    fetch(`http://127.0.0.1:8000/teachers/list/`)
+    fetch(`https://librac-backend.vercel.app/teachers/list/`)
         .then((res) => res.json())
         .then((data) => loadAllTeachers(data))
         .catch((error) => {

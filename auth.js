@@ -19,7 +19,7 @@ const handleReg=(event)=>{
             confirm_password,
         };     
     if(password===confirm_password){
-        fetch("http://127.0.0.1:8000/teachers/register/",{
+        fetch("https://librac-backend.vercel.app/teachers/register/",{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(info),
@@ -53,7 +53,7 @@ const handleRegStudent=(event)=>{
             confirm_password,
         };     
     if(password===confirm_password){
-        fetch("http://127.0.0.1:8000/students/register/",{
+        fetch("https://librac-backend.vercel.app/students/register/",{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(info),
@@ -87,7 +87,7 @@ const handleLogin = (event) => {
         errorMessageDiv.textContent = '';
     }
     if(username && password){
-        fetch(`http://127.0.0.1:8000/accounts/login/`,{
+        fetch(`https://librac-backend.vercel.app/accounts/login/`,{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(info),
@@ -126,7 +126,7 @@ const showErrorMessage =(message)=>{
 const handleLogOut =()=>{
     const user_id = localStorage.getItem('user_id');
     const token = localStorage.getItem('token');
-    fetch(`http://127.0.0.1:8000/accounts/logout/`, {
+    fetch(`https://librac-backend.vercel.app/accounts/logout/`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,
