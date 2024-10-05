@@ -55,7 +55,7 @@ const loadStudentCourses = (data) =>{
     else{
         const container = document.querySelector('.student-course-container');
         container.innerHTML =`
-            <h1>Go to the <a href="course_page.html">Advising Page</a> to Add Courses for this Semester</h1>
+            <h1 class='advising-header'>Click here to go to the <a href="course_page.html">Advising Page</a> to Add Courses for this Semester</h1>
         `;
     }
 }
