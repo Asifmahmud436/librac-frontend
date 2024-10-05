@@ -386,6 +386,7 @@ span{
 }
 .edit-form-container .img-container{
     width: 40%;
+    /* height: 400px; */
 }
 .edit-form-container input{
     padding: 10px 20px 10px 8px;
@@ -403,7 +404,7 @@ span{
     padding-bottom: 5px;
 }
 .edit-form-container img{
-    height: 200px;
+    height: 400px;
     border-radius: 4px;
     width:428px;
 }
@@ -571,8 +572,12 @@ footer{
 .reg-std{
     margin-top: 20px;
 }
-
-
+.teacher-img{
+    height: 200px;
+}
+.user-photo{
+    height: 200px;
+}
 /* making it responsive */
 @media (max-width: 480px){
     .form-container h1{
