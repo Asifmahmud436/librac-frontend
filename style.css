@@ -431,6 +431,7 @@ span{
 
 .page-card{
     border-right:8px solid #800020;
+    height: 200px;
     border-left:0px;
 }
 
@@ -608,7 +609,7 @@ footer{
         padding-top: 60px;
     }
     .name-field{
-        margin-left: 70px;
+        margin-left: 110px;
         /* margin-top: 20px; */
         display: block;
         padding-top: 0px;
@@ -618,6 +619,7 @@ footer{
         font-size: 16px;
         font-weight: 700;
         padding-right: 14px;
+        display: block;
         /* color: ; */
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     }
@@ -639,7 +641,7 @@ footer{
         color: white;
     }
     .login-btn{
-        margin-left: 180px;
+        margin-left: 160px;
         font-size: 16px;
         padding: 8px 20px;
         border-radius: 8px;
