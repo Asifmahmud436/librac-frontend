@@ -13,15 +13,15 @@ Librac University introduces opportunity to Universities around the world which 
 
 
 
+## Live Link
+
+[Librac University](https://librac.netlify.app/) is currently deployed on netlify.Click on the blue link to go to the live website.
+
 
 ## Authors
 
 - [Asifmahmud436](https://github.com/Asifmahmud436)
 
-
-## Live Link
-
-[Librac University](https://librac.netlify.app/) is currently deployed on netlify.Click on the blue link to go to the live website.
 
 
 ## Run Locally
@@ -85,6 +85,9 @@ Start the server from the vscode with liveserver
 
 
 
+
+## 🔗 Connect with me:
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/asif-mahmud-3bb1a627a/)
 
 ## Feedback
 
