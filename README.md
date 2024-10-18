@@ -82,6 +82,34 @@ Start the server from the vscode with liveserver
 | `api_key` | `string` | shows all the teacher |
 
 
+## Features
+
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+## Lessons Learned
+
+After completing this project, I can: 
+- Use multiple role base user 
+- Deploy Projects on Vercel 
+- Use supabase as a site for deploying my PostgreSQL
+
+
+## Contribution
+
+Contributions are always welcome!
+
+Fork and clone the Project to your own repository.Then create a branch,update the code and send a pull request.
+
+Please adhere to this project's `code of conduct`.
+
+
+## Support
+
+For support, email safaandsafa4@gmail.com or join our discord: https://discord.gg/DaU4QuNM
+
+
 
 
 
