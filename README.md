@@ -3,10 +3,6 @@
 
 Librac University introduces opportunity to Universities around the world which gives their students to select courses for their students before a semester starts,drop courses and see the assignments of their course.The teachers can schedule and drop assignments for their courses they are assigned in.The VC of the University is the admin who can append new courses and assign teachers to any particular courses.It makes the life of students and teachers easier.
 
-FrontEnd Technology used: Html,CSS,Javascript \
-Backend Technology used: Python,Django,Django Rest Framework
-Database: PostgreSQL
-
 ## Tech Stack
 
 **FrontEnd Technology:**  Html, CSS, Javascript
