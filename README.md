@@ -38,48 +38,7 @@ Go to the project directory
   cd librac-frontend
 ```
 
-Install dependencies
-
-```bash
-  npm install
-```
-
 Start the server from the vscode with liveserver
-
-
-
-
-## API Reference
-
-#### Get user details
-
-```http
-  https://librac-backend.vercel.app/accounts/user/?user_id=${user_id}
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | collects the user_id from the localstorage,after login and shows user details |
-
-#### Get teacher courses
-
-```http
-  https://librac-backend.vercel.app/courses/list/?teacher_name=${name}
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | shows all the courses of a teacher |
-
-#### Get All the teacher_list
-
-```http
-  https://librac-backend.vercel.app/teachers/list/
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | shows all the teacher |
 
 
 ## Features
