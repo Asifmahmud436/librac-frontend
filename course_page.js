@@ -35,8 +35,8 @@ const loadCoureForReg = (courses) => {
 }
 
 const appendCourse = (courseId) => {
-    const token = localStorage.getItem('token'); // Get the token for authorization
-    const special_id = localStorage.getItem('special_id'); // Retrieve the student ID from localStorage
+    const token = localStorage.getItem('token'); 
+    const special_id = localStorage.getItem('special_id'); 
 
     if (token) {
         const courseData = {
@@ -45,7 +45,7 @@ const appendCourse = (courseId) => {
             drop_course: false,
         };
 
-        fetch('https://librac-backend.vercel.app/dashboards/list/', { // Use the correct URL for creating a new dashboard entry
+        fetch('https://librac-backend.vercel.app/dashboards/list/', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
